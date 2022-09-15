@@ -9,3 +9,6 @@ edition = "2021"
 uuid = {version = "1.1.2", features = ["v4"]}
 anyhow = "1.0.60"
 ang = "0.6.0"
+
+[lib]
+proc-macro = true
