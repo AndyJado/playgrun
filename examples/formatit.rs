@@ -1,7 +1,8 @@
+use std::u8;
+
 fn main() {
-    format2();
-    let a = Empty {};
-    println!("{:?}", a)
+    let msg = format!("{:?}", Mym::Y(0));
+    println!("{}",msg)
 }
 
 fn format1() {
@@ -27,3 +28,9 @@ fn format2() {
 
 #[derive(Debug)]
 struct Empty {}
+
+#[derive(Debug)]
+enum Mym {
+    M,
+    Y(u8),
+}
