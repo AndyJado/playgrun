@@ -1,4 +1,10 @@
-fn last_or_push<'a>(vec: &'a mut Vec<String>) -> &'a String {
+fn last_or_push<'b, 'a: 'b>(vec: &'a mut Vec<String>) -> &'a String {
+    match vec.last() {
+        Some(s) => {
+            let as = &'b *s;
+        },
+        None => todo!(),
+    }
     if let Some(s) = vec.last() {
         // borrows vec
         // returning s here forces vec to be borrowed
