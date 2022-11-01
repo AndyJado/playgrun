@@ -1,9 +1,9 @@
-use playgrun::AnswerFn;
+use playgrun::Makro;
 
-#[derive(AnswerFn)]
+#[derive(Makro)]
 struct TestDerive;
 
 fn main() {
     let a = TestDerive;
-    a.answer();
+    a.maka();
 }
